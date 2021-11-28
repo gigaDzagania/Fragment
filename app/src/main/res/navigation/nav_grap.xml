@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grap"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.fragmenfragment.fragments.fragmentsHome"
+        android:label="fragmentsHome"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.fragmenfragment.fragments.fragmentsDeshboard"
+        android:label="fragmentsDeshboard"
+        tools:layout="@layout/hragment_deshboard">
+
+        <argument
+            android:name="amount"
+            app:argType="integer"
+            android:defaultValue="-1" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.fragmenfragment.fragments.fragmentsNotifications"
+        android:label="fragmentsNotifications"
+        tools:layout="@layout/fragment_notification"/>
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.fragmenfragment.fragments.fragmentsFavortite"
+        android:label="fragmentsFavortite"
+        tools:layout="@layout/fragment_favorite"/>
+
+</navigation>
